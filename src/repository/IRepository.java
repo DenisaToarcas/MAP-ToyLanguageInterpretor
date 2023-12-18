@@ -4,8 +4,11 @@ import model.prgState.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public interface IRepository {
-    PrgState getCrtState() throws MyException;
-    void logPrgStateExec() throws MyException, IOException;
+    void addPrgState(PrgState state);
+    ArrayList<PrgState> getPrgList();
+    void setPrgList(ArrayList<PrgState> list);
+    void logPrgStateExec(PrgState prgState) throws MyException, IOException;
 }

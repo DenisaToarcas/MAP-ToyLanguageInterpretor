@@ -1,0 +1,149 @@
+The program state:
+The ExeStack:
+ (string varf;(varf=test.in;(OpenRFile: varf;(int varc;(ReadFile: varc = read(varf);(print(varc);CloseRFile: varf)))))) | 
+The SymTable:
+ 
+The FileTable:
+ 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (varf=test.in;(OpenRFile: varf;(int varc;(ReadFile: varc = read(varf);(print(varc);CloseRFile: varf))))) | string varf | 
+The SymTable:
+ 
+The FileTable:
+ 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (varf=test.in;(OpenRFile: varf;(int varc;(ReadFile: varc = read(varf);(print(varc);CloseRFile: varf))))) | 
+The SymTable:
+ varf--> | 
+The FileTable:
+ 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (OpenRFile: varf;(int varc;(ReadFile: varc = read(varf);(print(varc);CloseRFile: varf)))) | varf=test.in | 
+The SymTable:
+ varf--> | 
+The FileTable:
+ 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (OpenRFile: varf;(int varc;(ReadFile: varc = read(varf);(print(varc);CloseRFile: varf)))) | 
+The SymTable:
+ varf-->test.in | 
+The FileTable:
+ 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (int varc;(ReadFile: varc = read(varf);(print(varc);CloseRFile: varf))) | OpenRFile: varf | 
+The SymTable:
+ varf-->test.in | 
+The FileTable:
+ 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (int varc;(ReadFile: varc = read(varf);(print(varc);CloseRFile: varf))) | 
+The SymTable:
+ varf-->test.in | 
+The FileTable:
+ test.in
+
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (ReadFile: varc = read(varf);(print(varc);CloseRFile: varf)) | int varc | 
+The SymTable:
+ varf-->test.in | 
+The FileTable:
+ test.in
+
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (ReadFile: varc = read(varf);(print(varc);CloseRFile: varf)) | 
+The SymTable:
+ varc-->0 | varf-->test.in | 
+The FileTable:
+ test.in
+
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (print(varc);CloseRFile: varf) | ReadFile: varc = read(varf) | 
+The SymTable:
+ varc-->0 | varf-->test.in | 
+The FileTable:
+ test.in
+
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (print(varc);CloseRFile: varf) | 
+The SymTable:
+ varc-->5 | varf-->test.in | 
+The FileTable:
+ test.in
+
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ CloseRFile: varf | print(varc) | 
+The SymTable:
+ varc-->5 | varf-->test.in | 
+The FileTable:
+ test.in
+
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ CloseRFile: varf | 
+The SymTable:
+ varc-->5 | varf-->test.in | 
+The FileTable:
+ test.in
+
+The Out list:
+ 5
+
+
+The program state:
+The ExeStack:
+ 
+The SymTable:
+ varc-->5 | varf-->test.in | 
+The FileTable:
+ 
+The Out list:
+ 5
+
+

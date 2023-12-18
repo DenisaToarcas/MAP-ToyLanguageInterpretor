@@ -33,7 +33,7 @@ public class OpenRFile implements IStmt{
         else
             throw new MyException("The filename: " + fileName  + " was already defined in the FileTable!!!");
 
-        return state;
+        return null;
     }
 
     public IStmt deepCopy()

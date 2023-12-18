@@ -1,0 +1,89 @@
+The program state:
+The ExeStack:
+ (bool a;(int v;(a=true;((IF(a) THEN(v=2)ELSE(v=3));print(v))))) | 
+The SymTable:
+ 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (int v;(a=true;((IF(a) THEN(v=2)ELSE(v=3));print(v)))) | bool a | 
+The SymTable:
+ 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (int v;(a=true;((IF(a) THEN(v=2)ELSE(v=3));print(v)))) | 
+The SymTable:
+ a-->false | 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (a=true;((IF(a) THEN(v=2)ELSE(v=3));print(v))) | int v | 
+The SymTable:
+ a-->false | 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ (a=true;((IF(a) THEN(v=2)ELSE(v=3));print(v))) | 
+The SymTable:
+ a-->false | v-->0 | 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ ((IF(a) THEN(v=2)ELSE(v=3));print(v)) | a=true | 
+The SymTable:
+ a-->false | v-->0 | 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ ((IF(a) THEN(v=2)ELSE(v=3));print(v)) | 
+The SymTable:
+ a-->true | v-->0 | 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ print(v) | (IF(a) THEN(v=2)ELSE(v=3)) | 
+The SymTable:
+ a-->true | v-->0 | 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ print(v) | v=2 | 
+The SymTable:
+ a-->true | v-->0 | 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ print(v) | 
+The SymTable:
+ a-->true | v-->2 | 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ 
+The SymTable:
+ a-->true | v-->2 | 
+The Out list:
+ 2
+
+

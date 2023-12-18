@@ -147,6 +147,24 @@ public class Interpretor {
 
         PrgState prgState11 = new PrgState(exeStack11, SymTbl11, Out11, FileTable11, Heap11, ex11);
 
+        IStmt ex12 = new CompStmt(
+                new VarDeclStmt("v", new IntType()), new CompStmt(
+                        new VarDeclStmt("a", new RefType(new IntType())), new CompStmt(
+                                new AssignStmt("v", new ValueExp(new IntValue(10))), new CompStmt(
+                                        new aHStmt("a", new ValueExp(new IntValue(22))), new CompStmt(
+                                                new ForkStmt(new CompStmt(new wHStmt("a", new ValueExp(new IntValue(30))), new CompStmt(
+                                                        new AssignStmt("v", new ValueExp(new IntValue(32))), new CompStmt(
+                                                        new PrintStmt(new VarExp("v")),
+                                                        new PrintStmt(new rHExp(new VarExp("a"))))))), new CompStmt(new PrintStmt(new VarExp("v")), new PrintStmt(new rHExp(new VarExp("a")))))))));
+
+        MyIStack<IStmt> exeStack12 = new MyStack<IStmt>();
+        MyIDictionary<String, Value> SymTbl12 = new MyDictionary<String, Value>();
+        MyIList<Value> Out12 = new MyList<Value>();
+        MyIHeap<Integer, Value> Heap12 = new Heap();
+        MyIFileTable<String, BufferedReader> FileTable12 = new FileTable();
+
+        PrgState prgState12 = new PrgState(exeStack12, SymTbl12, Out12, FileTable12, Heap12, ex12);
+
 
         Scanner sc = new Scanner(System.in);
 
@@ -197,6 +215,10 @@ public class Interpretor {
         Controller controller11 = new Controller(repo11);
         controller11.setFlag();
 
+        IRepository repo12 = new Repository(prgState12, logFile);
+        Controller controller12 = new Controller(repo12);
+        controller12.setFlag();
+
 
         while(true) {
             try {
@@ -213,6 +235,7 @@ public class Interpretor {
                 menu.addCommand(new RunExample("9", ex9.toString(), controller9));
                 menu.addCommand(new RunExample("10", ex10.toString(), controller10));
                 menu.addCommand(new RunExample("11", ex11.toString(), controller11));
+                menu.addCommand(new RunExample("12", ex12.toString(), controller12));
                 menu.show();
             }
             catch (MyException exception) {

@@ -52,7 +52,7 @@ public class ReadFile implements IStmt{
         else
             throw new MyException("The variable name " + var_name + " was not defined before!!!");
 
-        return state;
+        return null;
     }
 
     @Override

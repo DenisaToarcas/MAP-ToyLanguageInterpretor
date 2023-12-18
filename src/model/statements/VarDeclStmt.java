@@ -38,7 +38,7 @@ public class VarDeclStmt implements IStmt {
             throw new MyException("The variable " + this.name + " is already declared!");
         SymTbl.update(this.name, this.defaultValue);
 
-        return state;
+        return null;
     }
 
     @Override

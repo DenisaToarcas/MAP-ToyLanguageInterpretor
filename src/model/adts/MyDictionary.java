@@ -5,13 +5,13 @@ import exception.MyException;
 import java.util.*;
 
 public class MyDictionary<K, T> implements MyIDictionary<K, T> {
-    private final Dictionary<K, T> SymTable;
+    private final Map<K, T> SymTable;
 
     public MyDictionary() {
         this.SymTable = new Hashtable<K, T>();
     }
 
-    public MyDictionary(Dictionary<K, T> SymTable) {
+    public MyDictionary(Map<K, T> SymTable) {
         this.SymTable = SymTable;
     }
 
@@ -22,11 +22,10 @@ public class MyDictionary<K, T> implements MyIDictionary<K, T> {
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
-        Enumeration<K> keys = this.SymTable.keys();
 
-        while (keys.hasMoreElements()) {
-            K key = keys.nextElement();
-            result.append(key).append("-->").append(this.SymTable.get(key)).append("\n");
+        for (K key : this.SymTable.keySet())
+        {
+            result.append(key.toString()).append("-->").append(this.SymTable.get(key).toString()).append("\n");
         }
 
         return result.toString();
@@ -38,13 +37,7 @@ public class MyDictionary<K, T> implements MyIDictionary<K, T> {
 
     @Override
     public boolean isDefined(K key) {
-        Enumeration<K> keys = this.SymTable.keys();
-
-        while (keys.hasMoreElements()) {
-            if (key.equals(keys.nextElement()))
-                return true;
-        }
-        return false;
+        return this.SymTable.containsKey(key);
     }
 
     @Override
@@ -62,24 +55,8 @@ public class MyDictionary<K, T> implements MyIDictionary<K, T> {
     }
 
     @Override
-    public MyIDictionary<K, T> getContent()
+    public Map<K, T> getContent()
     {
-        return this;
-    }
-
-    @Override
-    public List<T> values()
-    {
-        List<T> result = new ArrayList<>();
-
-        Enumeration<K> keys = this.SymTable.keys();
-
-        while (keys.hasMoreElements()) {
-            K key = keys.nextElement();
-            T value = SymTable.get(key);
-            result.add(value);
-        }
-
-        return result;
+        return this.SymTable;
     }
 }

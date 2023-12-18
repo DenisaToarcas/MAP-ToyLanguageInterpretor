@@ -43,7 +43,7 @@ public class WhileStmt implements IStmt{
         else
             throw new MyException("The expression is not of type boolean!!!");
 
-        return state;
+        return null;
     }
 
     public IStmt deepCopy()

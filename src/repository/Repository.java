@@ -7,32 +7,47 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Repository implements IRepository{
-    private final PrgState prgState;
+    private ArrayList<PrgState> listPrgStates = new ArrayList<>();
     private final String logFile;
 
     public Repository(PrgState state, String logFile)
     {
-        this.prgState = state;
+        addPrgState(state);
         this.logFile = logFile;
     }
 
     @Override
-    public PrgState getCrtState() throws MyException {
-        return this.prgState;
+    public void addPrgState(PrgState state)
+    {
+        this.listPrgStates.add(state);
+    }
+
+    @Override
+    public ArrayList<PrgState> getPrgList()
+    {
+        return this.listPrgStates;
+    }
+
+    @Override
+    public void setPrgList(ArrayList<PrgState> list)
+    {
+        this.listPrgStates = list;
     }
 
     @Override
     public String toString()
     {
-        return this.prgState.toString();
+        return this.listPrgStates.toString();
     }
 
     @Override
-    public void logPrgStateExec() throws MyException, IOException {
+    public void logPrgStateExec(PrgState prgState) throws IOException {
         PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(this.logFile, true)));
-        String result = this.prgState.toString();
+        String result = prgState.toString();
 
         writer.write(result);
         writer.close();

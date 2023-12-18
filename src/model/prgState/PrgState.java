@@ -7,6 +7,7 @@ import model.values.*;
 import model.expressions.*;
 
 import java.io.BufferedReader;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class PrgState{
     private final MyIStack<IStmt> exeStack;
@@ -17,6 +18,13 @@ public class PrgState{
     private final MyIHeap<Integer, Value> heap;
     private final IStmt originalProgram; //optional field, but good to have
 
+    private final int prgStateID;
+    private static AtomicInteger ID = new AtomicInteger(0);
+    //In Java, the AtomicInteger class is part of the java.util.concurrent.atomic package
+    //and provides atomic operations on integers.
+    //This means that operations performed on AtomicInteger instances are guaranteed
+    // to be executed atomically, without the need for explicit synchronization.
+
     public PrgState(MyIStack<IStmt> stk, MyIDictionary<String,Value> symtbl, MyIList<Value>
             ot, MyIFileTable<String, BufferedReader> fileTable, MyIHeap<Integer, Value> heap, IStmt prg){
         exeStack = stk;
@@ -24,14 +32,23 @@ public class PrgState{
         out = ot;
         this.fileTable = fileTable;
         this.heap = heap;
+        this.prgStateID = ID.incrementAndGet();
+        //The incrementAndGet() method atomically increments the current value
+        // of the AtomicInteger by one and returns the updated value.
+
         originalProgram = prg.deepCopy(); //recreate the entire original prg
         stk.push(originalProgram);
+    }
+
+    public int getPrgStateID()
+    {
+        return this.prgStateID;
     }
 
     @Override
     public String toString()
     {
-        return "The program state:\n" +
+        return "The program state ID is:" + this.prgStateID + "\n" +
                 "The ExeStack:\n" + this.exeStack.toString() + "\n" +
                 "The SymTable:\n" + this.symTable.toString() + "\n" +
                 "The Heap:\n" + this.heap.toString() + "\n" +
@@ -82,12 +99,10 @@ public class PrgState{
 
     public PrgState oneStep() throws MyException, Exception
     {
-        MyIStack<IStmt> stk = this.getStk();
-
-        if (stk.isEmpty())
+        if (this.exeStack.isEmpty())
             throw new MyException("The ExeStack of the PrgState is empty!");
 
-        IStmt crtStmt = stk.pop();
+        IStmt crtStmt = this.exeStack.pop();
         return crtStmt.execute(this);
     }
 
@@ -100,5 +115,10 @@ public class PrgState{
             if (this.exeStack.equals(((PrgState) another).exeStack) && this.symTable.equals(((PrgState) another).symTable) && this.out.equals(((PrgState) another).out) && this.fileTable.equals(((PrgState) another).fileTable))
                 return true;
             return false;
+    }
+
+    public boolean isNotCompleted()
+    {
+        return !exeStack.isEmpty();
     }
 }

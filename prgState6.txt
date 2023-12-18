@@ -1,0 +1,492 @@
+The program state:
+The ExeStack:
+(int v;(v=5;(while(v > 0) (print(v);v=v - 1);)))
+
+The SymTable:
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(v=5;(while(v > 0) (print(v);v=v - 1);))
+int v
+
+The SymTable:
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(v=5;(while(v > 0) (print(v);v=v - 1);))
+
+The SymTable:
+v-->0
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(while(v > 0) (print(v);v=v - 1);)
+v=5
+
+The SymTable:
+v-->0
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(while(v > 0) (print(v);v=v - 1);)
+
+The SymTable:
+v-->5
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+
+The SymTable:
+v-->5
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+(print(v);v=v - 1)
+
+The SymTable:
+v-->5
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+v=v - 1
+print(v)
+
+The SymTable:
+v-->5
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+v=v - 1
+
+The SymTable:
+v-->5
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+
+The SymTable:
+v-->4
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+(print(v);v=v - 1)
+
+The SymTable:
+v-->4
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+v=v - 1
+print(v)
+
+The SymTable:
+v-->4
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+v=v - 1
+
+The SymTable:
+v-->4
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+
+The SymTable:
+v-->3
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+(print(v);v=v - 1)
+
+The SymTable:
+v-->3
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+v=v - 1
+print(v)
+
+The SymTable:
+v-->3
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+v=v - 1
+
+The SymTable:
+v-->3
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+
+The SymTable:
+v-->2
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+(print(v);v=v - 1)
+
+The SymTable:
+v-->2
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+v=v - 1
+print(v)
+
+The SymTable:
+v-->2
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+v=v - 1
+
+The SymTable:
+v-->2
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+2
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+
+The SymTable:
+v-->1
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+2
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+(print(v);v=v - 1)
+
+The SymTable:
+v-->1
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+2
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+v=v - 1
+print(v)
+
+The SymTable:
+v-->1
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+2
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+v=v - 1
+
+The SymTable:
+v-->1
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+2
+1
+
+
+The program state:
+The ExeStack:
+
+while(v > 0) (print(v);v=v - 1)
+
+The SymTable:
+v-->0
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+2
+1
+
+
+The program state:
+The ExeStack:
+
+
+The SymTable:
+v-->0
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+2
+1
+
+
+The program state:
+The ExeStack:
+
+The SymTable:
+v-->0
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+5
+4
+3
+2
+1
+
+

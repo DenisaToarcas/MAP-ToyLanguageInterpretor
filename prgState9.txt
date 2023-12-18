@@ -1,0 +1,152 @@
+The program state:
+The ExeStack:
+((Ref int) v;(aH(v, 20);(print(rH(v));(wH(v, 30);print(rH(v) + 5)))))
+
+The SymTable:
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(aH(v, 20);(print(rH(v));(wH(v, 30);print(rH(v) + 5))))
+(Ref int) v
+
+The SymTable:
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(aH(v, 20);(print(rH(v));(wH(v, 30);print(rH(v) + 5))))
+
+The SymTable:
+v-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(print(rH(v));(wH(v, 30);print(rH(v) + 5)))
+aH(v, 20)
+
+The SymTable:
+v-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(print(rH(v));(wH(v, 30);print(rH(v) + 5)))
+
+The SymTable:
+v-->(1, int)
+
+The Heap:
+1-->20
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(wH(v, 30);print(rH(v) + 5))
+print(rH(v))
+
+The SymTable:
+v-->(1, int)
+
+The Heap:
+1-->20
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(wH(v, 30);print(rH(v) + 5))
+
+The SymTable:
+v-->(1, int)
+
+The Heap:
+1-->20
+
+The FileTable:
+
+The Out list:
+20
+
+
+The program state:
+The ExeStack:
+print(rH(v) + 5)
+wH(v, 30)
+
+The SymTable:
+v-->(1, int)
+
+The Heap:
+1-->20
+
+The FileTable:
+
+The Out list:
+20
+
+
+The program state:
+The ExeStack:
+print(rH(v) + 5)
+
+The SymTable:
+v-->(1, int)
+
+The Heap:
+1-->30
+
+The FileTable:
+
+The Out list:
+20
+
+
+The program state:
+The ExeStack:
+
+The SymTable:
+v-->(1, int)
+
+The Heap:
+1-->30
+
+The FileTable:
+
+The Out list:
+20
+35
+
+

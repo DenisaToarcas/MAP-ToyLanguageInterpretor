@@ -6,6 +6,7 @@ import model.values.Value;
 
 import java.util.Dictionary;
 import java.util.List;
+import java.util.Map;
 
 public interface MyIDictionary<K, T> {
     void add(K key, T element);
@@ -18,7 +19,5 @@ public interface MyIDictionary<K, T> {
 
     MyDictionary<K, T> update(K key, T element);
 
-    MyIDictionary<K, T> getContent();
-
-    List<T> values();
+    Map<K, T> getContent();
 }

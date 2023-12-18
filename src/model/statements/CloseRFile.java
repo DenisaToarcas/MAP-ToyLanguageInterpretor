@@ -35,7 +35,7 @@ public class CloseRFile implements IStmt{
         else
             throw new MyException("The filename: " + fileName  + " was not defined in the FileTable!!!");
 
-        return state;
+        return null;
     }
 
     @Override

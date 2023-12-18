@@ -58,7 +58,7 @@ public class wHStmt implements IStmt{
         }else
             throw new MyException("The used variable " + varName + " was not declared before!!\n");
 
-        return state;
+        return null;
     }
 
     public IStmt deepCopy()
