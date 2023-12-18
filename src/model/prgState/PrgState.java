@@ -7,7 +7,10 @@ import model.values.*;
 import model.expressions.*;
 
 import java.io.BufferedReader;
+import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import static model.adts.GarbageCollector.*;
 
 public class PrgState{
     private final MyIStack<IStmt> exeStack;
@@ -103,6 +106,7 @@ public class PrgState{
             throw new MyException("The ExeStack of the PrgState is empty!");
 
         IStmt crtStmt = this.exeStack.pop();
+
         return crtStmt.execute(this);
     }
 

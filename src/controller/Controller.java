@@ -63,6 +63,20 @@ public class Controller {
         prgList.addAll(newPrgList);
         //------------------------------------------------------------------------------
 
+        List<Integer> addrFromHeap = getAddrFromHeap(prgList.getFirst().getHeap().getContent().values());
+        List<Integer> addrFromSymTbls = new ArrayList<>();
+        List<Integer> addresses = new ArrayList<>();
+
+        for (int index = 0; index < prgList.size(); index++)
+        {
+            addresses = getAddrFromSymTable(prgList.get(index).getSymTable().getContent().values());
+            addrFromSymTbls.addAll(addresses);
+        }
+
+        addrFromSymTbls.addAll(addresses);
+
+        prgList.getFirst().getHeap().setContent((HashMap<Integer, Value>) safeGarbageCollector(getAddrFromBoth(addrFromSymTbls, addrFromHeap), prgList.getFirst().getHeap().getContent()));
+
         //after the execution, print the PrgState List into the log file
         prgList.forEach(prg -> {
             try {
@@ -84,23 +98,6 @@ public class Controller {
 
         while(!prgList.isEmpty()){
             //HERE you can call conservativeGarbageCollector
-            ArrayList<PrgState> finalPrgList = prgList;
-
-            //I added a new static method that gets all the values from all the SymTables
-            //of the not completed prgStates (getAddrFromAllSymTbl) that returns a list of values
-            //and I changed the method getAddrFromSymTable in the Garbage Collector to have as parameter
-            //a List<Collection<Value>>
-
-            List<Integer> addrFromHeap = getAddrFromHeap(prgList.getFirst().getHeap().getContent().values());
-
-            prgList.forEach(prgState -> {
-                List<Integer> addrFromSymTbl = getAddrFromSymTable(prgState.getSymTable().getContent().values());
-
-                prgState.getHeap().setContent((HashMap<Integer, Value>) safeGarbageCollector(
-                        getAddrFromBoth(addrFromSymTbl, addrFromHeap),
-                        prgState.getHeap().getContent()));
-            });
-
 
             oneStepForAllPrg(prgList);
 

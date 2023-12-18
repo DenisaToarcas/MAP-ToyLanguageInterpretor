@@ -28,7 +28,10 @@ public class ForkStmt implements IStmt{
     public PrgState execute(PrgState state) throws Exception
     {
         MyIStack<IStmt> newStack = new MyStack<IStmt>();
-        MyIDictionary<String, Value> newSymTbl = new MyDictionary<String, Value> (state.getSymTable().getContent());
+        MyIDictionary<String, Value> newSymTbl = new MyDictionary<String, Value>();
+
+        for (String key: state.getSymTable().getContent().keySet())
+            newSymTbl.add(key, state.getSymTable().getValue(key));
 
         return new PrgState(newStack, newSymTbl, state.getOut(), state.getFileTable(), state.getHeap(), stmt);
     }

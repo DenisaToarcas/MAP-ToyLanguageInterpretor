@@ -165,6 +165,20 @@ public class Interpretor {
 
         PrgState prgState12 = new PrgState(exeStack12, SymTbl12, Out12, FileTable12, Heap12, ex12);
 
+        IStmt ex13 = new CompStmt(
+                new VarDeclStmt("a", new RefType(new IntType())), new CompStmt(
+                        new VarDeclStmt("counter", new IntType()),
+                                new WhileStmt(new RelationalExp("<", new VarExp("counter"), new ValueExp(new IntValue(10))),
+                                        new CompStmt(new ForkStmt(new ForkStmt(new CompStmt(new aHStmt("a", new VarExp("counter")), new CompStmt(new PrintStmt(new VarExp("counter")), new PrintStmt(new rHExp(new VarExp("a"))))))),
+                                        new AssignStmt("counter", new ArithExp("+", new VarExp("counter"), new ValueExp(new IntValue(1))))))));
+
+        MyIStack<IStmt> exeStack13 = new MyStack<IStmt>();
+        MyIDictionary<String, Value> SymTbl13 = new MyDictionary<String, Value>();
+        MyIList<Value> Out13 = new MyList<Value>();
+        MyIHeap<Integer, Value> Heap13 = new Heap();
+        MyIFileTable<String, BufferedReader> FileTable13 = new FileTable();
+
+        PrgState prgState13 = new PrgState(exeStack13, SymTbl13, Out13, FileTable13, Heap13, ex13);
 
         Scanner sc = new Scanner(System.in);
 
@@ -219,6 +233,10 @@ public class Interpretor {
         Controller controller12 = new Controller(repo12);
         controller12.setFlag();
 
+        IRepository repo13 = new Repository(prgState13, logFile);
+        Controller controller13 = new Controller(repo13);
+        controller13.setFlag();
+
 
         while(true) {
             try {
@@ -236,6 +254,7 @@ public class Interpretor {
                 menu.addCommand(new RunExample("10", ex10.toString(), controller10));
                 menu.addCommand(new RunExample("11", ex11.toString(), controller11));
                 menu.addCommand(new RunExample("12", ex12.toString(), controller12));
+                menu.addCommand(new RunExample("13", ex13.toString(), controller13));
                 menu.show();
             }
             catch (MyException exception) {

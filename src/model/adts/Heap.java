@@ -6,6 +6,7 @@ import model.values.Value;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Heap implements MyIHeap<Integer, Value>{
@@ -19,7 +20,7 @@ public class Heap implements MyIHeap<Integer, Value>{
 
     public Heap()
     {
-        this.Heap = new HashMap<Integer, Value>();
+        this.Heap = new ConcurrentHashMap<>();
     }
 
     @Override
