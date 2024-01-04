@@ -6,6 +6,8 @@ import model.adts.MyIFileTable;
 import model.expressions.Exp;
 import model.prgState.PrgState;
 import model.types.IntType;
+import model.types.StringType;
+import model.types.Type;
 import model.values.IntValue;
 import model.values.Value;
 
@@ -59,5 +61,15 @@ public class ReadFile implements IStmt{
     public IStmt deepCopy()
     {
         return new ReadFile(this.exp.deepCopy(), var_name);
+    }
+
+    @Override
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException
+    {
+        Type type = this.exp.typeCheck(typeEnv);
+
+        if (type.equals(new StringType()))
+            return typeEnv;
+        else throw new MyException("Read file argument is not of type String!!");
     }
 }

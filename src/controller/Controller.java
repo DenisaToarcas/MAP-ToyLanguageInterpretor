@@ -97,7 +97,6 @@ public class Controller {
         ArrayList<PrgState> prgList = removeCompletedPrg(repo.getPrgList());
 
         while(!prgList.isEmpty()){
-            //HERE you can call conservativeGarbageCollector
 
             oneStepForAllPrg(prgList);
 

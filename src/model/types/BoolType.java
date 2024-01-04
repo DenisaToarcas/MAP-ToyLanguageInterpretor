@@ -17,11 +17,6 @@ public class BoolType implements Type {
         return new BoolValue(false);
     }
 
-    public static void checkBool(Type type) throws MyException {
-        if (!type.equals(new BoolType()))
-            throw new MyException("The type is not BOOL!");
-    }
-
     public Type deepCopy()
     {
         return new BoolType();

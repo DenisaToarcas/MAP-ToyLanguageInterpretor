@@ -7,6 +7,7 @@ import model.adts.MyIStack;
 import model.expressions.Exp;
 import model.prgState.PrgState;
 import model.statements.IStmt;
+import model.types.Type;
 import model.values.Value;
 
 public class PrintStmt implements IStmt {
@@ -35,5 +36,12 @@ public class PrintStmt implements IStmt {
     public IStmt deepCopy()
     {
         return new PrintStmt(exp.deepCopy());
+    }
+
+    @Override
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException{
+        exp.typeCheck(typeEnv);
+
+        return typeEnv;
     }
 }

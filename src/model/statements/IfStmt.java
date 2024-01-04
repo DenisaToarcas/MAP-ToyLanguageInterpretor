@@ -6,6 +6,7 @@ import model.adts.MyIStack;
 import model.expressions.*;
 import model.prgState.PrgState;
 import model.types.BoolType;
+import model.types.Type;
 import model.values.*;
 
 public class IfStmt implements IStmt {
@@ -47,6 +48,22 @@ public class IfStmt implements IStmt {
     {
         return new IfStmt(this.exp.deepCopy(), this.thenS.deepCopy(), this.elseS.deepCopy());
     }
+
+    @Override
+    public MyIDictionary<String,Type> typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException{
+
+        Type typexp=exp.typeCheck(typeEnv);
+
+        if (typexp.equals(new BoolType())) {
+            thenS.typeCheck(typeEnv);
+            elseS.typeCheck(typeEnv);
+
+            return typeEnv;
+        }
+        else
+            throw new MyException("The condition of IF has not the type bool");
+    }
+
 }
 
 

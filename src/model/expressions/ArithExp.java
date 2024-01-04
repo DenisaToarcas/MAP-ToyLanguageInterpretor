@@ -57,4 +57,19 @@ public class ArithExp implements Exp{
     public Exp deepCopy() {
         return new ArithExp(this.sign, this.e1.deepCopy(), this.e2.deepCopy());
     }
+
+    @Override
+    public Type typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException{
+        Type typ1, typ2;
+        typ1=e1.typeCheck(typeEnv);
+        typ2=e2.typeCheck(typeEnv);
+
+        if (typ1.equals(new IntType())) {
+            if (typ2.equals(new IntType())) {
+                return new IntType();
+            } else
+                throw new MyException("second operand is not an integer");
+        }else
+            throw new MyException("first operand is not an integer");
+    }
 }

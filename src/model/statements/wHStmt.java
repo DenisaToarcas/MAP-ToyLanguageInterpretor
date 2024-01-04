@@ -61,8 +61,19 @@ public class wHStmt implements IStmt{
         return null;
     }
 
+    @Override
     public IStmt deepCopy()
     {
         return new wHStmt(this.varName, this.exp.deepCopy());
+    }
+
+    @Override
+    public MyIDictionary<String,Type> typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException{
+        Type typevar = typeEnv.lookup(varName);
+        Type typexp = exp.typeCheck(typeEnv);
+        if (typevar.equals(new RefType(typexp)))
+            return typeEnv;
+        else
+            throw new MyException("wH stmt: right hand side and left hand side have different types ");
     }
 }

@@ -3,7 +3,9 @@ package model.expressions;
 import exception.MyException;
 import model.adts.MyIDictionary;
 import model.adts.MyIHeap;
+import model.types.BoolType;
 import model.types.IntType;
+import model.types.Type;
 import model.values.BoolValue;
 import model.values.IntValue;
 import model.values.Value;
@@ -55,8 +57,24 @@ public class RelationalExp implements Exp{
             throw new MyException("first operand is not an integer\n");
     }
 
+    @Override
     public Exp deepCopy()
     {
         return new RelationalExp(this.relation, this.exp1.deepCopy(), this.exp2.deepCopy());
+    }
+
+    @Override
+    public Type typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException{
+        Type typ1, typ2;
+        typ1=exp1.typeCheck(typeEnv);
+        typ2=exp2.typeCheck(typeEnv);
+
+        if (typ1.equals(new IntType())) {
+            if (typ2.equals(new IntType())) {
+                return new BoolType();
+            } else
+                throw new MyException("second operand is not an integer");
+        }else
+            throw new MyException("first operand is not an integer");
     }
 }

@@ -1,9 +1,12 @@
 package model.statements;
 
 import exception.MyException;
+import model.adts.MyIDictionary;
 import model.adts.MyIFileTable;
 import model.expressions.*;
 import model.prgState.PrgState;
+import model.types.StringType;
+import model.types.Type;
 
 import java.io.BufferedReader;
 
@@ -36,8 +39,19 @@ public class OpenRFile implements IStmt{
         return null;
     }
 
+    @Override
     public IStmt deepCopy()
     {
         return new OpenRFile(this.exp.deepCopy());
+    }
+
+    @Override
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException
+    {
+        Type type = this.exp.typeCheck(typeEnv);
+
+        if (type.equals(new StringType()))
+            return typeEnv;
+        else throw new MyException("Open file argument is not of type String!!");
     }
 }

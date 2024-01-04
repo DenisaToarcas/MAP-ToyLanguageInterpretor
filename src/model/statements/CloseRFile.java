@@ -1,9 +1,12 @@
 package model.statements;
 
 import exception.MyException;
+import model.adts.MyIDictionary;
 import model.adts.MyIFileTable;
 import model.expressions.Exp;
 import model.prgState.PrgState;
+import model.types.StringType;
+import model.types.Type;
 
 import java.io.BufferedReader;
 
@@ -42,5 +45,15 @@ public class CloseRFile implements IStmt{
     public IStmt deepCopy()
     {
         return new CloseRFile(this.exp.deepCopy());
+    }
+
+    @Override
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException
+    {
+        Type type = this.exp.typeCheck(typeEnv);
+
+        if (type.equals(new StringType()))
+            return typeEnv;
+        else throw new MyException("Close file argument is not of type String!!");
     }
 }

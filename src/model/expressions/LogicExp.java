@@ -4,6 +4,8 @@ import exception.MyException;
 import model.adts.MyIDictionary;
 import model.adts.MyIHeap;
 import model.types.BoolType;
+import model.types.IntType;
+import model.types.Type;
 import model.values.*;
 
 import java.util.Objects;
@@ -54,4 +56,21 @@ public class LogicExp implements Exp{
     {
         return new LogicExp(logicOp, this.e1.deepCopy(), this.e2.deepCopy());
     }
-}
+
+    @Override
+    public Type typeCheck(MyIDictionary<String, Type> typeEnv) throws MyException
+    {
+        Type typ1, typ2;
+
+        typ1 = this.e1.typeCheck(typeEnv);
+        typ2 = this.e2.typeCheck(typeEnv);
+
+        if (typ1.equals(new BoolType())) {
+            if (typ2.equals(new BoolType())) {
+                return new BoolType();
+            } else
+                throw new MyException("second operand is not a boolean");
+        }else
+            throw new MyException("first operand is not a boolean");
+    }
+    }

@@ -44,4 +44,9 @@ public class ValueExp implements Exp {
     {
         return new ValueExp(this.exp.deepCopy());
     }
+
+    @Override
+    public Type typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException{
+        return exp.getType();
+    }
 }

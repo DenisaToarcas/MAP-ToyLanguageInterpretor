@@ -6,6 +6,8 @@ import model.adts.MyIStack;
 import model.expressions.Exp;
 import model.prgState.PrgState;
 import model.types.BoolType;
+import model.types.IntType;
+import model.types.Type;
 import model.values.BoolValue;
 import model.values.Value;
 
@@ -46,8 +48,22 @@ public class WhileStmt implements IStmt{
         return null;
     }
 
+    @Override
     public IStmt deepCopy()
     {
         return new WhileStmt(this.exp.deepCopy(), this.stmt.deepCopy());
+    }
+
+    @Override
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException
+    {
+        Type type = this.exp.typeCheck(typeEnv);
+
+        if (type.equals(new BoolType()))
+        {
+            this.stmt.typeCheck(typeEnv);
+            return typeEnv;
+        }
+        else throw new MyException("The type of the expression is not boolean!!");
     }
 }

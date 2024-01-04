@@ -3,6 +3,7 @@ package model.expressions;
 import exception.MyException;
 import model.adts.MyIDictionary;
 import model.adts.MyIHeap;
+import model.types.Type;
 import model.values.*;
 
 import java.util.Objects;
@@ -40,5 +41,10 @@ public class VarExp implements Exp{
     public Exp deepCopy()
     {
         return new VarExp(this.id);
+    }
+
+    @Override
+    public Type typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException{
+        return typeEnv.lookup(id);
     }
 }

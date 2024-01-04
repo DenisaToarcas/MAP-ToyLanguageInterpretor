@@ -1,10 +1,12 @@
 package model.statements;
 
+import exception.MyException;
 import model.adts.MyDictionary;
 import model.adts.MyIDictionary;
 import model.adts.MyIStack;
 import model.adts.MyStack;
 import model.prgState.PrgState;
+import model.types.Type;
 import model.values.Value;
 
 import java.util.Dictionary;
@@ -40,5 +42,13 @@ public class ForkStmt implements IStmt{
     public IStmt deepCopy()
     {
         return new ForkStmt(this.stmt.deepCopy());
+    }
+
+    @Override
+    public MyIDictionary<String, Type> typeCheck(MyIDictionary<String,Type> typeEnv) throws MyException
+    {
+        this.stmt.typeCheck(typeEnv);
+
+        return typeEnv;
     }
 }
