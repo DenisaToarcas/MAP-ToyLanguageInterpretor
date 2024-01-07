@@ -1,17 +1,14 @@
 package org.example.gui_toylanguageinterpretor;
 
 import controller.Controller;
+import exception.MyException;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.layout.Region;
 import javafx.util.Pair;
 import model.adts.*;
 import model.expressions.*;
@@ -25,8 +22,7 @@ import model.values.Value;
 
 import java.io.BufferedReader;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class PrgStatesExecutionController implements Initializable {
 
@@ -34,6 +30,11 @@ public class PrgStatesExecutionController implements Initializable {
     private ObservableList<String> prgStateIdentifiers;
     private ArrayList<PrgState> prgStates;
     private Controller controller;
+
+    private PrgState stateToExecute;
+    private PrgState previousStateExecuted;
+    //this I introduced for the out list to be updated, if the last
+    //command is print
 
     //---------HEAP----------------------------
     @FXML
@@ -147,7 +148,7 @@ public class PrgStatesExecutionController implements Initializable {
 
     //--------------------------------------------------------------------------------------------------------------
 
-    IStmt ex4 = new CompStmt(new VarDeclStmt("varf", new StringType()), new CompStmt(new AssignStmt("varf", new ValueExp(new StringValue("test.in"))), new CompStmt(new OpenRFile(new VarExp("varf")), new CompStmt(new VarDeclStmt("varc", new IntType()), new CompStmt(new ReadFile(new VarExp("varf"), "varc"), new CompStmt(new PrintStmt(new VarExp("varc")), new CloseRFile(new VarExp("varf"))))))));
+    IStmt ex4 = new CompStmt(new VarDeclStmt("varf", new StringType()), new CompStmt(new AssignStmt("varf", new ValueExp(new StringValue("src/test.in"))), new CompStmt(new OpenRFile(new VarExp("varf")), new CompStmt(new VarDeclStmt("varc", new IntType()), new CompStmt(new ReadFile(new VarExp("varf"), "varc"), new CompStmt(new PrintStmt(new VarExp("varc")), new CloseRFile(new VarExp("varf"))))))));
 
     MyIStack<IStmt> exeStack4 = new MyStack<IStmt>();
     MyIDictionary<String, Value> SymTbl4 = new MyDictionary<String, Value>();
@@ -293,6 +294,143 @@ public class PrgStatesExecutionController implements Initializable {
         addPrgStatesANDIdentifiers();
         this.NoOfPrgStatesTextField.setText(String.valueOf(this.prgStates.size()));
         populatePrgStateIdentifiersListView();
+
+        this.stateToExecute = null;
+
+        AddressTableColumn.setCellValueFactory(p ->
+        {
+            return new SimpleStringProperty(p.getValue().getKey());
+        });
+        ValueTableColumn.setCellValueFactory(p ->
+        {
+            return new SimpleStringProperty(p.getValue().getValue());
+        });
+        VariableNameTableColumn.setCellValueFactory(p ->
+        {
+            return new SimpleStringProperty(p.getValue().getKey());
+        });
+        ValueSymTblTableColumn.setCellValueFactory(p ->
+        {
+            return new SimpleStringProperty(p.getValue().getValue());
+        });
+    }
+
+    public PrgState getPrg()
+    {
+        if (controller.getPrgStates().isEmpty())
+            return null;
+        else
+        {
+            return this.controller.getPrgStates().getFirst();
+        }
+    }
+
+    public void OneStepButtonClicked()
+    {
+        if (this.controller == null)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "PrgState was not selected from the other window!!!", ButtonType.OK);
+            alert.setTitle("Error Dialog!");
+            alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+            alert.showAndWait();
+        }
+
+        else {
+            if (this.stateToExecute == null || this.stateToExecute.getStk().isEmpty()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "PrgState is null or the stack is empty!!!", ButtonType.OK);
+                alert.setTitle("Error Dialog!");
+                alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+                alert.showAndWait();
+            }
+            else
+            {
+                try
+                {
+                    this.previousStateExecuted = getPrg();
+                    controller.wrapperFunctionforGUI();
+                    this.stateToExecute = getPrg();
+
+                }catch (MyException exception)
+                {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, exception.toString(), ButtonType.OK);
+                    alert.setTitle("Error Dialog!");
+                    alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+                    alert.showAndWait();
+
+                } catch (Exception e) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, e.toString(), ButtonType.OK);
+                    alert.setTitle("Error Dialog!");
+                    alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+                    alert.showAndWait();
+                }
+            }
+        }
+        populateExeStackListView();
+        populateOutListView();
+        populateFileTableListView();
+        populateSymTableTableView();
+        populateHeapTableView();
+    }
+
+    public void populateExeStackListView()
+    {
+        if (this.stateToExecute != null)
+        {
+            List<String> exeStack = this.stateToExecute.getStk().getToString();
+            this.ExeStackListView.setItems(FXCollections.observableList(exeStack));
+        }
+        else
+            this.ExeStackListView.setItems(null);
+    }
+
+    public void populateOutListView()
+    {
+        if (this.previousStateExecuted != null)
+        {
+            List<String> outList = Collections.singletonList(this.previousStateExecuted.getOut().toString());
+            this.OutListView.setItems(FXCollections.observableList(outList));
+        }
+        else
+            this.OutListView.setItems(null);
+    }
+
+    public void populateFileTableListView()
+    {
+        if (this.stateToExecute != null)
+        {
+            List<String> files = Collections.singletonList(this.stateToExecute.getFileTable().toString());
+            this.FileTableListView.setItems(FXCollections.observableList(files));
+        }
+        else
+            this.FileTableListView.setItems(null);
+    }
+
+    public void populateSymTableTableView()
+    {
+        List<Pair<String, String>> symTbl = new ArrayList<>();
+        if (this.previousStateExecuted != null)
+        {
+            for (String key : this.previousStateExecuted.getSymTable().getContent().keySet())
+            {
+                symTbl.add(new Pair<>(key, this.previousStateExecuted.getSymTable().getValue(key).toString()));
+            }
+        }
+
+        this.SymTableTableView.setItems(FXCollections.observableList(symTbl));
+    }
+
+    public void populateHeapTableView()
+    {
+        List<Pair<String, String>> heapTbl = new ArrayList<>();
+        if (this.previousStateExecuted != null)
+        {
+            for (Integer key : this.previousStateExecuted.getHeap().getContent().keySet())
+            {
+                heapTbl.add(new Pair<>(key.toString(), this.previousStateExecuted.getHeap().getValue(key).toString()));
+            }
+        }
+
+        this.HeapTableView.setItems(FXCollections.observableList(heapTbl));
     }
 
     public void addPrgStatesANDIdentifiers()
@@ -353,6 +491,11 @@ public class PrgStatesExecutionController implements Initializable {
     public void setController(Controller contr)
     {
         this.controller = contr;
+    }
+
+    public void setPrgToExec(PrgState prgState)
+    {
+        this.stateToExecute = prgState;
     }
 }
 

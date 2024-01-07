@@ -13,7 +13,7 @@ public class Application extends javafx.application.Application {
         Scene scene1 = new Scene(fxmlLoader.load(), 600, 400);
         Stage stage1 = new Stage();
         stage1.setTitle("PrgState ListView");
-        stage1.setScene(scene1);
+        stage1.setScene(scene1);ssss
         stage1.show();
 
         PrgStatesSelectionController selectionController = fxmlLoader.getController();

@@ -7,7 +7,7 @@ import java.util.Map;
 public interface MyIDictionary<K, T> {
     void add(K key, T element);
 
-    T getValue(K key) throws MyException;
+    T getValue(K key);
 
     boolean isDefined(K key);
 

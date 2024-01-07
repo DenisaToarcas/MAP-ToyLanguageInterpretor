@@ -32,7 +32,7 @@ public class MyDictionary<K, T> implements MyIDictionary<K, T> {
         return result.toString();
     }
 
-    public T getValue(K key) throws MyException {
+    public T getValue(K key) {
         return this.SymTable.get(key);
     }
 

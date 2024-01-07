@@ -29,6 +29,28 @@ public class Controller {
         this.flag = false;
     }
 
+    public void wrapperFunctionforGUI() throws Exception {
+        executor = Executors.newFixedThreadPool(2);
+
+        //remove the completed programs
+        ArrayList<PrgState> prgList = removeCompletedPrg(repo.getPrgList());
+
+        oneStepForAllPrg(prgList);
+
+        //remove again the completed programs
+        prgList = removeCompletedPrg(prgList);
+
+        executor.shutdown();
+
+        //set the repo to the new prgList, after the removal
+        repo.setPrgList(prgList);
+    }
+
+    public ArrayList<PrgState> getPrgStates()
+    {
+        return repo.getPrgList();
+    }
+
     public ArrayList<PrgState> removeCompletedPrg(ArrayList<PrgState> inPrgList)
     {
         return inPrgList.stream()
