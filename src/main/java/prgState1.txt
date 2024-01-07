@@ -1,0 +1,25 @@
+The program state:
+The ExeStack: (int v;(v=2;print(v))) | 
+The SymTable: 
+The Out list: 
+The program state:
+The ExeStack: (v=2;print(v)) | int v | 
+The SymTable: 
+The Out list: 
+The program state:
+The ExeStack: (v=2;print(v)) | 
+The SymTable: v-->0 | 
+The Out list: 
+The program state:
+The ExeStack: print(v) | v=2 | 
+The SymTable: v-->0 | 
+The Out list: 
+The program state:
+The ExeStack: print(v) | 
+The SymTable: v-->2 | 
+The Out list: 
+The program state:
+The ExeStack: 
+The SymTable: v-->2 | 
+The Out list: 2
+

@@ -1,0 +1,158 @@
+The program state:
+The ExeStack:
+((Ref int) v;(aH(v, 20);aH(v, 30)))
+
+The SymTable:
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(aH(v, 20);aH(v, 30))
+(Ref int) v
+
+The SymTable:
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(aH(v, 20);aH(v, 30))
+(Ref int) v
+
+The SymTable:
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(aH(v, 20);aH(v, 30))
+
+The SymTable:
+v-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(aH(v, 20);aH(v, 30))
+
+The SymTable:
+v-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+aH(v, 30)
+aH(v, 20)
+
+The SymTable:
+v-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+aH(v, 30)
+aH(v, 20)
+
+The SymTable:
+v-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+aH(v, 30)
+
+The SymTable:
+v-->(1, int)
+
+The Heap:
+1-->20
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+aH(v, 30)
+
+The SymTable:
+v-->(1, int)
+
+The Heap:
+1-->20
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+
+The SymTable:
+v-->(2, int)
+
+The Heap:
+1-->20
+2-->30
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+
+The SymTable:
+v-->(2, int)
+
+The Heap:
+2-->30
+
+The FileTable:
+
+The Out list:
+
+

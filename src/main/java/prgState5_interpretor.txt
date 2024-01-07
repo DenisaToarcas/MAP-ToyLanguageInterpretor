@@ -1,0 +1,21 @@
+The program state:
+The ExeStack:
+ print(6 == 7) | 
+The SymTable:
+ 
+The FileTable:
+ 
+The Out list:
+ 
+
+The program state:
+The ExeStack:
+ 
+The SymTable:
+ 
+The FileTable:
+ 
+The Out list:
+ false
+
+

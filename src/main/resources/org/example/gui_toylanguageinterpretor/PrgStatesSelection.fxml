@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gui_toylanguageinterpretor.PrgStatesSelectionController">
+   <children>
+      <ListView fx:id="PrgStateListView" layoutX="14.0" layoutY="36.0" onMouseClicked="#checkIfPrgStateSelected" prefHeight="350.0" prefWidth="572.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </ListView>
+      <Label fx:id="PrgStateLabel" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="185.0" text="Current PrgStates are:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

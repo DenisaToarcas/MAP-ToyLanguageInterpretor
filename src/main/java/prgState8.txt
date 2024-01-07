@@ -1,0 +1,191 @@
+The program state:
+The ExeStack:
+((Ref int) v;(aH(v, 20);((Ref (Ref int)) a;(aH(a, v);(print(rH(v));print(rH(rH(a)) + 5))))))
+
+The SymTable:
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(aH(v, 20);((Ref (Ref int)) a;(aH(a, v);(print(rH(v));print(rH(rH(a)) + 5)))))
+(Ref int) v
+
+The SymTable:
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(aH(v, 20);((Ref (Ref int)) a;(aH(a, v);(print(rH(v));print(rH(rH(a)) + 5)))))
+
+The SymTable:
+v-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+((Ref (Ref int)) a;(aH(a, v);(print(rH(v));print(rH(rH(a)) + 5))))
+aH(v, 20)
+
+The SymTable:
+v-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+((Ref (Ref int)) a;(aH(a, v);(print(rH(v));print(rH(rH(a)) + 5))))
+
+The SymTable:
+v-->(1, int)
+
+The Heap:
+1-->20
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(aH(a, v);(print(rH(v));print(rH(rH(a)) + 5)))
+(Ref (Ref int)) a
+
+The SymTable:
+v-->(1, int)
+
+The Heap:
+1-->20
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(aH(a, v);(print(rH(v));print(rH(rH(a)) + 5)))
+
+The SymTable:
+a-->(0, (Ref int))
+v-->(1, int)
+
+The Heap:
+1-->20
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(print(rH(v));print(rH(rH(a)) + 5))
+aH(a, v)
+
+The SymTable:
+a-->(0, (Ref int))
+v-->(1, int)
+
+The Heap:
+1-->20
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+(print(rH(v));print(rH(rH(a)) + 5))
+
+The SymTable:
+a-->(2, (Ref int))
+v-->(1, int)
+
+The Heap:
+1-->20
+2-->(1, int)
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+print(rH(rH(a)) + 5)
+print(rH(v))
+
+The SymTable:
+a-->(2, (Ref int))
+v-->(1, int)
+
+The Heap:
+1-->20
+2-->(1, int)
+
+The FileTable:
+
+The Out list:
+
+
+The program state:
+The ExeStack:
+print(rH(rH(a)) + 5)
+
+The SymTable:
+a-->(2, (Ref int))
+v-->(1, int)
+
+The Heap:
+1-->20
+2-->(1, int)
+
+The FileTable:
+
+The Out list:
+20
+
+
+The program state:
+The ExeStack:
+
+The SymTable:
+a-->(2, (Ref int))
+v-->(1, int)
+
+The Heap:
+1-->20
+2-->(1, int)
+
+The FileTable:
+
+The Out list:
+20
+25
+
+

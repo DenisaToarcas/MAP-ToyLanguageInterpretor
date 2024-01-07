@@ -1,0 +1,3053 @@
+The program state ID is:13
+The ExeStack:
+(int counter;while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1))
+(Ref int) a
+
+The SymTable:
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:13
+The ExeStack:
+(int counter;while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1))
+
+The SymTable:
+a-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+int counter
+
+The SymTable:
+a-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->0
+a-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+(fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->0
+a-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+fork(fork((aH(a, counter);(print(counter);print(rH(a))))))
+
+The SymTable:
+counter-->0
+a-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+
+The SymTable:
+counter-->0
+a-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:14
+The ExeStack:
+fork((aH(a, counter);(print(counter);print(rH(a)))))
+
+The SymTable:
+a-->(0, int)
+counter-->0
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->1
+a-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:14
+The ExeStack:
+
+The SymTable:
+a-->(0, int)
+counter-->0
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:15
+The ExeStack:
+(aH(a, counter);(print(counter);print(rH(a))))
+
+The SymTable:
+counter-->0
+a-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+(fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->1
+a-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:15
+The ExeStack:
+(print(counter);print(rH(a)))
+aH(a, counter)
+
+The SymTable:
+counter-->0
+a-->(0, int)
+
+The Heap:
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+fork(fork((aH(a, counter);(print(counter);print(rH(a))))))
+
+The SymTable:
+counter-->1
+a-->(0, int)
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:15
+The ExeStack:
+(print(counter);print(rH(a)))
+
+The SymTable:
+counter-->0
+a-->(1, int)
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+
+The SymTable:
+counter-->1
+a-->(0, int)
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:15
+The ExeStack:
+print(rH(a))
+print(counter)
+
+The SymTable:
+counter-->0
+a-->(1, int)
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:16
+The ExeStack:
+fork((aH(a, counter);(print(counter);print(rH(a)))))
+
+The SymTable:
+a-->(0, int)
+counter-->1
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->2
+a-->(0, int)
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+0
+
+
+The program state ID is:15
+The ExeStack:
+print(rH(a))
+
+The SymTable:
+counter-->0
+a-->(1, int)
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+0
+
+
+The program state ID is:16
+The ExeStack:
+
+The SymTable:
+a-->(0, int)
+counter-->1
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+0
+
+
+The program state ID is:17
+The ExeStack:
+(aH(a, counter);(print(counter);print(rH(a))))
+
+The SymTable:
+counter-->1
+a-->(0, int)
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+0
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+(fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->2
+a-->(0, int)
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+0
+0
+
+
+The program state ID is:15
+The ExeStack:
+
+The SymTable:
+counter-->0
+a-->(1, int)
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+0
+0
+
+
+The program state ID is:17
+The ExeStack:
+(print(counter);print(rH(a)))
+aH(a, counter)
+
+The SymTable:
+counter-->1
+a-->(0, int)
+
+The Heap:
+1-->0
+
+The FileTable:
+
+The Out list:
+0
+0
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+fork(fork((aH(a, counter);(print(counter);print(rH(a))))))
+
+The SymTable:
+counter-->2
+a-->(0, int)
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+
+
+The program state ID is:17
+The ExeStack:
+(print(counter);print(rH(a)))
+
+The SymTable:
+counter-->1
+a-->(2, int)
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+
+The SymTable:
+counter-->2
+a-->(0, int)
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+
+
+The program state ID is:17
+The ExeStack:
+print(rH(a))
+print(counter)
+
+The SymTable:
+counter-->1
+a-->(2, int)
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+
+
+The program state ID is:18
+The ExeStack:
+fork((aH(a, counter);(print(counter);print(rH(a)))))
+
+The SymTable:
+a-->(0, int)
+counter-->2
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->3
+a-->(0, int)
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+
+
+The program state ID is:17
+The ExeStack:
+print(rH(a))
+
+The SymTable:
+counter-->1
+a-->(2, int)
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+
+
+The program state ID is:18
+The ExeStack:
+
+The SymTable:
+a-->(0, int)
+counter-->2
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+
+
+The program state ID is:19
+The ExeStack:
+(aH(a, counter);(print(counter);print(rH(a))))
+
+The SymTable:
+counter-->2
+a-->(0, int)
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+(fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->3
+a-->(0, int)
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+
+
+The program state ID is:17
+The ExeStack:
+
+The SymTable:
+counter-->1
+a-->(2, int)
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+
+
+The program state ID is:19
+The ExeStack:
+(print(counter);print(rH(a)))
+aH(a, counter)
+
+The SymTable:
+counter-->2
+a-->(0, int)
+
+The Heap:
+2-->1
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+fork(fork((aH(a, counter);(print(counter);print(rH(a))))))
+
+The SymTable:
+counter-->3
+a-->(0, int)
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+
+
+The program state ID is:19
+The ExeStack:
+(print(counter);print(rH(a)))
+
+The SymTable:
+counter-->2
+a-->(3, int)
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+
+The SymTable:
+counter-->3
+a-->(0, int)
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+
+
+The program state ID is:19
+The ExeStack:
+print(rH(a))
+print(counter)
+
+The SymTable:
+counter-->2
+a-->(3, int)
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+
+
+The program state ID is:20
+The ExeStack:
+fork((aH(a, counter);(print(counter);print(rH(a)))))
+
+The SymTable:
+a-->(0, int)
+counter-->3
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->4
+a-->(0, int)
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+
+
+The program state ID is:19
+The ExeStack:
+print(rH(a))
+
+The SymTable:
+counter-->2
+a-->(3, int)
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+
+
+The program state ID is:20
+The ExeStack:
+
+The SymTable:
+a-->(0, int)
+counter-->3
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+
+
+The program state ID is:21
+The ExeStack:
+(aH(a, counter);(print(counter);print(rH(a))))
+
+The SymTable:
+counter-->3
+a-->(0, int)
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+(fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->4
+a-->(0, int)
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+
+
+The program state ID is:19
+The ExeStack:
+
+The SymTable:
+counter-->2
+a-->(3, int)
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+
+
+The program state ID is:21
+The ExeStack:
+(print(counter);print(rH(a)))
+aH(a, counter)
+
+The SymTable:
+counter-->3
+a-->(0, int)
+
+The Heap:
+3-->2
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+fork(fork((aH(a, counter);(print(counter);print(rH(a))))))
+
+The SymTable:
+counter-->4
+a-->(0, int)
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+
+
+The program state ID is:21
+The ExeStack:
+(print(counter);print(rH(a)))
+
+The SymTable:
+counter-->3
+a-->(4, int)
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+
+The SymTable:
+counter-->4
+a-->(0, int)
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+
+
+The program state ID is:21
+The ExeStack:
+print(rH(a))
+print(counter)
+
+The SymTable:
+counter-->3
+a-->(4, int)
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+
+
+The program state ID is:22
+The ExeStack:
+fork((aH(a, counter);(print(counter);print(rH(a)))))
+
+The SymTable:
+a-->(0, int)
+counter-->4
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->5
+a-->(0, int)
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+
+
+The program state ID is:21
+The ExeStack:
+print(rH(a))
+
+The SymTable:
+counter-->3
+a-->(4, int)
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+
+
+The program state ID is:22
+The ExeStack:
+
+The SymTable:
+a-->(0, int)
+counter-->4
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+
+
+The program state ID is:23
+The ExeStack:
+(aH(a, counter);(print(counter);print(rH(a))))
+
+The SymTable:
+counter-->4
+a-->(0, int)
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+(fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->5
+a-->(0, int)
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+
+
+The program state ID is:21
+The ExeStack:
+
+The SymTable:
+counter-->3
+a-->(4, int)
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+
+
+The program state ID is:23
+The ExeStack:
+(print(counter);print(rH(a)))
+aH(a, counter)
+
+The SymTable:
+counter-->4
+a-->(0, int)
+
+The Heap:
+4-->3
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+fork(fork((aH(a, counter);(print(counter);print(rH(a))))))
+
+The SymTable:
+counter-->5
+a-->(0, int)
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+
+
+The program state ID is:23
+The ExeStack:
+(print(counter);print(rH(a)))
+
+The SymTable:
+counter-->4
+a-->(5, int)
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+
+The SymTable:
+counter-->5
+a-->(0, int)
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+
+
+The program state ID is:23
+The ExeStack:
+print(rH(a))
+print(counter)
+
+The SymTable:
+counter-->4
+a-->(5, int)
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+
+
+The program state ID is:24
+The ExeStack:
+fork((aH(a, counter);(print(counter);print(rH(a)))))
+
+The SymTable:
+a-->(0, int)
+counter-->5
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->6
+a-->(0, int)
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+
+
+The program state ID is:23
+The ExeStack:
+print(rH(a))
+
+The SymTable:
+counter-->4
+a-->(5, int)
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+
+
+The program state ID is:24
+The ExeStack:
+
+The SymTable:
+a-->(0, int)
+counter-->5
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+
+
+The program state ID is:25
+The ExeStack:
+(aH(a, counter);(print(counter);print(rH(a))))
+
+The SymTable:
+counter-->5
+a-->(0, int)
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+(fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->6
+a-->(0, int)
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+
+
+The program state ID is:23
+The ExeStack:
+
+The SymTable:
+counter-->4
+a-->(5, int)
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+
+
+The program state ID is:25
+The ExeStack:
+(print(counter);print(rH(a)))
+aH(a, counter)
+
+The SymTable:
+counter-->5
+a-->(0, int)
+
+The Heap:
+5-->4
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+fork(fork((aH(a, counter);(print(counter);print(rH(a))))))
+
+The SymTable:
+counter-->6
+a-->(0, int)
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+
+
+The program state ID is:25
+The ExeStack:
+(print(counter);print(rH(a)))
+
+The SymTable:
+counter-->5
+a-->(6, int)
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+
+The SymTable:
+counter-->6
+a-->(0, int)
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+
+
+The program state ID is:25
+The ExeStack:
+print(rH(a))
+print(counter)
+
+The SymTable:
+counter-->5
+a-->(6, int)
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+
+
+The program state ID is:26
+The ExeStack:
+fork((aH(a, counter);(print(counter);print(rH(a)))))
+
+The SymTable:
+a-->(0, int)
+counter-->6
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->7
+a-->(0, int)
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+
+
+The program state ID is:25
+The ExeStack:
+print(rH(a))
+
+The SymTable:
+counter-->5
+a-->(6, int)
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+
+
+The program state ID is:26
+The ExeStack:
+
+The SymTable:
+a-->(0, int)
+counter-->6
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+
+
+The program state ID is:27
+The ExeStack:
+(aH(a, counter);(print(counter);print(rH(a))))
+
+The SymTable:
+counter-->6
+a-->(0, int)
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+(fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->7
+a-->(0, int)
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+
+
+The program state ID is:25
+The ExeStack:
+
+The SymTable:
+counter-->5
+a-->(6, int)
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+
+
+The program state ID is:27
+The ExeStack:
+(print(counter);print(rH(a)))
+aH(a, counter)
+
+The SymTable:
+counter-->6
+a-->(0, int)
+
+The Heap:
+6-->5
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+fork(fork((aH(a, counter);(print(counter);print(rH(a))))))
+
+The SymTable:
+counter-->7
+a-->(0, int)
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+
+
+The program state ID is:27
+The ExeStack:
+(print(counter);print(rH(a)))
+
+The SymTable:
+counter-->6
+a-->(7, int)
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+
+The SymTable:
+counter-->7
+a-->(0, int)
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+
+
+The program state ID is:27
+The ExeStack:
+print(rH(a))
+print(counter)
+
+The SymTable:
+counter-->6
+a-->(7, int)
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+
+
+The program state ID is:28
+The ExeStack:
+fork((aH(a, counter);(print(counter);print(rH(a)))))
+
+The SymTable:
+a-->(0, int)
+counter-->7
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->8
+a-->(0, int)
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+
+
+The program state ID is:27
+The ExeStack:
+print(rH(a))
+
+The SymTable:
+counter-->6
+a-->(7, int)
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+
+
+The program state ID is:28
+The ExeStack:
+
+The SymTable:
+a-->(0, int)
+counter-->7
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+
+
+The program state ID is:29
+The ExeStack:
+(aH(a, counter);(print(counter);print(rH(a))))
+
+The SymTable:
+counter-->7
+a-->(0, int)
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+(fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->8
+a-->(0, int)
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+
+
+The program state ID is:27
+The ExeStack:
+
+The SymTable:
+counter-->6
+a-->(7, int)
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+
+
+The program state ID is:29
+The ExeStack:
+(print(counter);print(rH(a)))
+aH(a, counter)
+
+The SymTable:
+counter-->7
+a-->(0, int)
+
+The Heap:
+7-->6
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+fork(fork((aH(a, counter);(print(counter);print(rH(a))))))
+
+The SymTable:
+counter-->8
+a-->(0, int)
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+
+
+The program state ID is:29
+The ExeStack:
+(print(counter);print(rH(a)))
+
+The SymTable:
+counter-->7
+a-->(8, int)
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+
+The SymTable:
+counter-->8
+a-->(0, int)
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+
+
+The program state ID is:29
+The ExeStack:
+print(rH(a))
+print(counter)
+
+The SymTable:
+counter-->7
+a-->(8, int)
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+
+
+The program state ID is:30
+The ExeStack:
+fork((aH(a, counter);(print(counter);print(rH(a)))))
+
+The SymTable:
+a-->(0, int)
+counter-->8
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->9
+a-->(0, int)
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+
+
+The program state ID is:29
+The ExeStack:
+print(rH(a))
+
+The SymTable:
+counter-->7
+a-->(8, int)
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+
+
+The program state ID is:30
+The ExeStack:
+
+The SymTable:
+a-->(0, int)
+counter-->8
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+
+
+The program state ID is:31
+The ExeStack:
+(aH(a, counter);(print(counter);print(rH(a))))
+
+The SymTable:
+counter-->8
+a-->(0, int)
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+(fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->9
+a-->(0, int)
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+
+
+The program state ID is:29
+The ExeStack:
+
+The SymTable:
+counter-->7
+a-->(8, int)
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+
+
+The program state ID is:31
+The ExeStack:
+(print(counter);print(rH(a)))
+aH(a, counter)
+
+The SymTable:
+counter-->8
+a-->(0, int)
+
+The Heap:
+8-->7
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+fork(fork((aH(a, counter);(print(counter);print(rH(a))))))
+
+The SymTable:
+counter-->9
+a-->(0, int)
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+
+
+The program state ID is:31
+The ExeStack:
+(print(counter);print(rH(a)))
+
+The SymTable:
+counter-->8
+a-->(9, int)
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+counter=counter + 1
+
+The SymTable:
+counter-->9
+a-->(0, int)
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+
+
+The program state ID is:31
+The ExeStack:
+print(rH(a))
+print(counter)
+
+The SymTable:
+counter-->8
+a-->(9, int)
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+
+
+The program state ID is:32
+The ExeStack:
+fork((aH(a, counter);(print(counter);print(rH(a)))))
+
+The SymTable:
+a-->(0, int)
+counter-->9
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+
+
+The program state ID is:13
+The ExeStack:
+while(counter < 10) (fork(fork((aH(a, counter);(print(counter);print(rH(a))))));counter=counter + 1)
+
+The SymTable:
+counter-->10
+a-->(0, int)
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+
+
+The program state ID is:31
+The ExeStack:
+print(rH(a))
+
+The SymTable:
+counter-->8
+a-->(9, int)
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+
+
+The program state ID is:32
+The ExeStack:
+
+The SymTable:
+a-->(0, int)
+counter-->9
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+
+
+The program state ID is:33
+The ExeStack:
+(aH(a, counter);(print(counter);print(rH(a))))
+
+The SymTable:
+counter-->9
+a-->(0, int)
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+
+
+The program state ID is:13
+The ExeStack:
+
+The SymTable:
+counter-->10
+a-->(0, int)
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+8
+
+
+The program state ID is:31
+The ExeStack:
+
+The SymTable:
+counter-->8
+a-->(9, int)
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+8
+
+
+The program state ID is:33
+The ExeStack:
+(print(counter);print(rH(a)))
+aH(a, counter)
+
+The SymTable:
+counter-->9
+a-->(0, int)
+
+The Heap:
+9-->8
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+8
+
+
+The program state ID is:33
+The ExeStack:
+(print(counter);print(rH(a)))
+
+The SymTable:
+counter-->9
+a-->(10, int)
+
+The Heap:
+10-->9
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+8
+
+
+The program state ID is:33
+The ExeStack:
+print(rH(a))
+print(counter)
+
+The SymTable:
+counter-->9
+a-->(10, int)
+
+The Heap:
+10-->9
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+8
+
+
+The program state ID is:33
+The ExeStack:
+print(rH(a))
+
+The SymTable:
+counter-->9
+a-->(10, int)
+
+The Heap:
+10-->9
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+8
+9
+
+
+The program state ID is:33
+The ExeStack:
+
+The SymTable:
+counter-->9
+a-->(10, int)
+
+The Heap:
+10-->9
+
+The FileTable:
+
+The Out list:
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+8
+9
+9
+
+

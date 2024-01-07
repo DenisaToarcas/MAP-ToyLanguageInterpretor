@@ -1,0 +1,41 @@
+The program state:
+The ExeStack: (int a;(int b;(a=2 + 3 * 5;(b=a + 1;print(b))))) | 
+The SymTable: 
+The Out list: 
+The program state:
+The ExeStack: (int b;(a=2 + 3 * 5;(b=a + 1;print(b)))) | int a | 
+The SymTable: 
+The Out list: 
+The program state:
+The ExeStack: (int b;(a=2 + 3 * 5;(b=a + 1;print(b)))) | 
+The SymTable: a-->0 | 
+The Out list: 
+The program state:
+The ExeStack: (a=2 + 3 * 5;(b=a + 1;print(b))) | int b | 
+The SymTable: a-->0 | 
+The Out list: 
+The program state:
+The ExeStack: (a=2 + 3 * 5;(b=a + 1;print(b))) | 
+The SymTable: b-->0 | a-->0 | 
+The Out list: 
+The program state:
+The ExeStack: (b=a + 1;print(b)) | a=2 + 3 * 5 | 
+The SymTable: b-->0 | a-->0 | 
+The Out list: 
+The program state:
+The ExeStack: (b=a + 1;print(b)) | 
+The SymTable: b-->0 | a-->17 | 
+The Out list: 
+The program state:
+The ExeStack: print(b) | b=a + 1 | 
+The SymTable: b-->0 | a-->17 | 
+The Out list: 
+The program state:
+The ExeStack: print(b) | 
+The SymTable: b-->18 | a-->17 | 
+The Out list: 
+The program state:
+The ExeStack: 
+The SymTable: b-->18 | a-->17 | 
+The Out list: 18
+
