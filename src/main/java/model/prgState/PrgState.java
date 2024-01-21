@@ -16,7 +16,6 @@ public class PrgState{
     private MyIDictionary<String, Value> symTable;
     private final MyIList<Value> out;
     private final MyIFileTable<String, BufferedReader> fileTable;
-
     private final MyIHeap<Integer, Value> heap;
     private final IStmt originalProgram; //optional field, but good to have
 
