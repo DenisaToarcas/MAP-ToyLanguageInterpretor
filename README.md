@@ -1,5 +1,6 @@
 # ToyLanguageInterpretor
 Here is the implementation for an Interpretor that uses a non-specific language, considered toy language.
+I implemented this project using Java, and for the GUI I used JavaFX. It uses multi-threading execution, typechecking and has a garbage collector for memory allocation.
 
 Implementation for concurrency mechanisms are provided here:
 - Count Down Latch: https://github.com/DenisaToarcas/UBB--Computer-Science/tree/main/2nd%20year/Semester%203/Advanced%20Methods%20of%20Programming/CountDownLatch%20-%20ToyLanguageInterpretor
